@@ -1,0 +1,322 @@
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>CSS Keyboard</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+</head>
+<body>
+  <h1>CSS/JS Keyboard</h1>
+  <div class="keyboard button">
+    <div class="buttons">
+      <div id="button_esc" class="button">ESC</div>
+    </div>
+    <div class="buttons">
+      <div id="button_tilde" class="button">~</div>
+      <div id="button_1" class="button">1</div>
+      <div id="button_2" class="button">2</div>
+      <div id="button_3" class="button">3</div>
+      <div id="button_4" class="button">4</div>
+      <div id="button_5" class="button">5</div>
+      <div id="button_6" class="button">6</div>
+      <div id="button_7" class="button">7</div>
+      <div id="button_8" class="button">8</div>
+      <div id="button_9" class="button">9</div>
+      <div id="button_0" class="button">0</div>
+      <div id="button_hyphen" class="button">-</div>
+      <div id="button_equals" class="button">=</div>
+      <div id="button_delete" class="button">DEL</div>
+    </div>
+    <div class="buttons">
+      <div id="button_tab" class="button">TAB</div>
+      <div id="button_q" class="button">Q</div>
+      <div id="button_w" class="button">W</div>
+      <div id="button_e" class="button">E</div>
+      <div id="button_r" class="button">R</div>
+      <div id="button_t" class="button">T</div>
+      <div id="button_y" class="button">Y</div>
+      <div id="button_u" class="button">U</div>
+      <div id="button_i" class="button">I</div>
+      <div id="button_o" class="button">O</div>
+      <div id="button_p" class="button">P</div>
+      <div id="button_lbracket" class="button">[</div>
+      <div id="button_rbracket" class="button">]</div>
+      <div id="button_bslash" class="button">\</div>
+    </div>
+    <div class="buttons">
+      <div id="button_caps" class="button">CAPS</div>
+      <div id="button_a" class="button">A</div>
+      <div id="button_s" class="button">S</div>
+      <div id="button_d" class="button">D</div>
+      <div id="button_f" class="button">F</div>
+      <div id="button_g" class="button">G</div>
+      <div id="button_h" class="button">H</div>
+      <div id="button_j" class="button">J</div>
+      <div id="button_k" class="button">K</div>
+      <div id="button_l" class="button">L</div>
+      <div id="button_semicolon" class="button">;</div>
+      <div id="button_apostrophe" class="button">'</div>
+      <div id="button_enter" class="button primary">ENTER</div>
+    </div>
+    <div class="buttons">
+      <div id="button_lshift" class="button">L. SHIFT</div>
+      <div id="button_z" class="button">Z</div>
+      <div id="button_x" class="button">X</div>
+      <div id="button_c" class="button">C</div>
+      <div id="button_v" class="button">V</div>
+      <div id="button_b" class="button">B</div>
+      <div id="button_n" class="button">N</div>
+      <div id="button_m" class="button">M</div>
+      <div id="button_comma" class="button">,</div>
+      <div id="button_period" class="button">.</div>
+      <div id="button_fslash" class="button">/</div>
+      <div id="button_rshift" class="button">R. SHIFT</div>
+    </div>
+    <div class="buttons">
+      <div id="button_lctrl" class="button">CTRL</div>
+      <div id="button_lalt" class="button">ALT</div>
+      <div id="button_space" class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div id="button_ralt" class="button">ALT</div>
+      <div id="button_rctrl" class="button">CTRL</div>
+    </div>
+  </div>
+  <style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+  body {
+    background: url('http://subtlepatterns.com/patterns/purty_wood.png') repeat;
+    cursor: default;
+    font-family: Myriad Pro;
+    padding: 50px;
+  }
+  h1 {
+    color: white;
+    display: block;
+    font-size: 100px;
+    margin-bottom: 30px;
+    opacity: 0.75;
+    text-align: center;
+    text-shadow: 0 -1px 0 #333;
+  }
+  .keyboard {
+    display: block !important;
+    float: none !important;
+    margin: 0 auto;
+    padding: 1em;
+    width: 1000px;
+  }
+  .keyboard .buttons {
+    margin-bottom: 0.25em;
+  }
+  .buttons:after {
+  	content: ".";
+  	display: block;
+  	clear: both;
+  	visibility: hidden;
+  	line-height: 0;
+  	height: 0;
+  }
+  .button {
+    background: #eee;
+    border: 1px solid #ccc;
+    border-bottom: 0.3em solid #ccc;
+    border-radius: 8px 8px 4px 4px;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #fff, 0 1px 2px #333;
+    color: #333;
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.5em 0.8em 0.4em;
+    text-shadow: 0 -0.04em 0 #fff;
+  }
+  .button:not(.keyboard):hover {
+    background: #f8f8f8;
+    cursor: pointer;
+  }
+  .button:not(.keyboard):active,.button.pressed {
+    background: #ddd;
+    border-bottom-width: 0;
+    box-shadow: inset 0px 0.1em 0.1em #777;
+    cursor: pointer;
+    margin-top: 0.3em;
+  }
+  .button.primary {
+    background: #e82a2c;
+    border-color: #d00000;
+    border-bottom-color: #c00000;
+    box-shadow: inset 1px 1px 0px #f17f80, inset -1px -1px 0px #f17f80, 0 1px 2px #333;
+    color: white;
+    text-shadow: 0 -0.04em 0 #b90000;
+  }
+  .button.primary:not(.keyboard):hover {
+    background: #f43c3e;
+  }
+  .button.primary:active,.button.primary.pressed {
+    background: #db1d1f;
+    box-shadow: inset 0px 0.1em 0.1em #990000;
+  }
+  </style>
+  <script type="text/javascript">
+  var KeyCodes = {
+    BACKSPACE:     8,
+    TAB:           9,
+    ENTER:        13,
+    SHIFT:        16,
+    CTRL:         17,
+    ALT:          18,
+    PAUSE_BREAK:  19,
+    CAPS_LOCK:    20,
+    ESCAPE:       27,
+    SPACE:        32, 
+    PAGE_UP:      33,
+    PAGE_DOWN:    34,
+    END:          35,
+    HOME:         36,
+    LEFT_ARROW:   37,
+    UP_ARROW:     38,
+    RIGHT_ARROW:  39,
+    DOWN_ARROW:   40,
+    INSERT:       45,
+    DELETE:       46,
+    DIGIT_0:      48,
+    DIGIT_1:      49,
+    DIGIT_2:      50,
+    DIGIT_3:      51,
+    DIGIT_4:      52,
+    DIGIT_5:      53,
+    DIGIT_6:      54,
+    DIGIT_7:      55,
+    DIGIT_8:      56,
+    DIGIT_9:      57,
+    LETTER_A:     65,
+    LETTER_B:     66,
+    LETTER_C:     67,
+    LETTER_D:     68,
+    LETTER_E:     69,
+    LETTER_F:     70,
+    LETTER_G:     71,
+    LETTER_H:     72,
+    LETTER_I:     73,
+    LETTER_J:     74,
+    LETTER_K:     75,
+    LETTER_L:     76,
+    LETTER_M:     77,
+    LETTER_N:     78,
+    LETTER_O:     79,
+    LETTER_P:     80,
+    LETTER_Q:     81,
+    LETTER_R:     82,
+    LETTER_S:     83,
+    LETTER_T:     84,
+    LETTER_U:     85,
+    LETTER_V:     86,
+    LETTER_W:     87,
+    LETTER_X:     88,
+    LETTER_Y:     89,
+    LETTER_Z:     90,
+    SEMI_COLON:  186,
+    EQUAL_SIGN:  187,
+    COMMA:       188,
+    DASH:        189,
+    PERIOD:      190,
+    FORWARD_SLASH: 191,
+    GRAVE_ACCENT:  192,
+    OPEN_BRACKET:  219,
+    BACK_SLASH:    220,
+    CLOSE_BRACKET: 221,
+    SINGLE_QUOTE:  222
+  };
+  $(document).ready(function() {
+    $(window).keydown(function(e) {
+      var keyCode = e.which;
+      e.preventDefault();
+      executeFuncForKey(pressButton, keyCode);
+    });
+    $(window).keyup(function(e) {
+      var keyCode = e.which;
+      e.preventDefault(); 
+      executeFuncForKey(releaseButton, keyCode);
+    });
+  });
+  
+  function executeFuncForKey(keyFunc, keyCode) {
+    switch (keyCode) {
+      case KeyCodes.ESCAPE:         keyFunc('button_esc'); break;
+
+      case KeyCodes.GRAVE_ACCENT:   keyFunc('button_tilde'); break;
+      case KeyCodes.DIGIT_1:        keyFunc('button_1'); break;
+      case KeyCodes.DIGIT_2:        keyFunc('button_2'); break;
+      case KeyCodes.DIGIT_3:        keyFunc('button_3'); break;
+      case KeyCodes.DIGIT_4:        keyFunc('button_4'); break;
+      case KeyCodes.DIGIT_5:        keyFunc('button_5'); break;
+      case KeyCodes.DIGIT_6:        keyFunc('button_6'); break;
+      case KeyCodes.DIGIT_7:        keyFunc('button_7'); break;
+      case KeyCodes.DIGIT_8:        keyFunc('button_8'); break;
+      case KeyCodes.DIGIT_9:        keyFunc('button_9'); break;
+      case KeyCodes.DIGIT_0:        keyFunc('button_0'); break;
+      case KeyCodes.DASH:           keyFunc('button_hyphen'); break;
+      case KeyCodes.EQUAL_SIGN:     keyFunc('button_equals'); break;
+      case KeyCodes.BACKSPACE:      keyFunc('button_delete'); break;
+
+      case KeyCodes.TAB:            keyFunc('button_tab'); break;
+      case KeyCodes.LETTER_Q:       keyFunc('button_q'); break;
+      case KeyCodes.LETTER_W:       keyFunc('button_w'); break;
+      case KeyCodes.LETTER_E:       keyFunc('button_e'); break;
+      case KeyCodes.LETTER_R:       keyFunc('button_r'); break;
+      case KeyCodes.LETTER_T:       keyFunc('button_t'); break;
+      case KeyCodes.LETTER_Y:       keyFunc('button_y'); break;
+      case KeyCodes.LETTER_U:       keyFunc('button_u'); break;
+      case KeyCodes.LETTER_I:       keyFunc('button_i'); break;
+      case KeyCodes.LETTER_O:       keyFunc('button_o'); break;
+      case KeyCodes.LETTER_P:       keyFunc('button_p'); break;
+      case KeyCodes.OPEN_BRACKET:   keyFunc('button_lbracket'); break;
+      case KeyCodes.CLOSE_BRACKET:  keyFunc('button_rbracket'); break;
+      case KeyCodes.BACK_SLASH:     keyFunc('button_bslash'); break;
+
+      case KeyCodes.CAPS_LOCK:      keyFunc('button_caps'); break;
+      case KeyCodes.LETTER_A:       keyFunc('button_a'); break;
+      case KeyCodes.LETTER_S:       keyFunc('button_s'); break;
+      case KeyCodes.LETTER_D:       keyFunc('button_d'); break;
+      case KeyCodes.LETTER_F:       keyFunc('button_f'); break;
+      case KeyCodes.LETTER_G:       keyFunc('button_g'); break;
+      case KeyCodes.LETTER_H:       keyFunc('button_h'); break;
+      case KeyCodes.LETTER_J:       keyFunc('button_j'); break;
+      case KeyCodes.LETTER_K:       keyFunc('button_k'); break;
+      case KeyCodes.LETTER_L:       keyFunc('button_l'); break;
+      case KeyCodes.SEMI_COLON:     keyFunc('button_semicolon'); break;
+      case KeyCodes.SINGLE_QUOTE:   keyFunc('button_apostrophe'); break;
+      case KeyCodes.ENTER:          keyFunc('button_enter'); break;
+
+      case KeyCodes.SHIFT:          keyFunc('button_lshift'); keyFunc('button_rshift'); break;
+      case KeyCodes.LETTER_Z:       keyFunc('button_z'); break;
+      case KeyCodes.LETTER_X:       keyFunc('button_x'); break;
+      case KeyCodes.LETTER_C:       keyFunc('button_c'); break;
+      case KeyCodes.LETTER_V:       keyFunc('button_v'); break;
+      case KeyCodes.LETTER_B:       keyFunc('button_b'); break;
+      case KeyCodes.LETTER_N:       keyFunc('button_n'); break;
+      case KeyCodes.LETTER_M:       keyFunc('button_m'); break;
+      case KeyCodes.COMMA:          keyFunc('button_comma'); break;
+      case KeyCodes.PERIOD:         keyFunc('button_period'); break;
+      case KeyCodes.FORWARD_SLASH:  keyFunc('button_fslash'); break;
+
+      case KeyCodes.CTRL:           keyFunc('button_lctrl'); keyFunc('button_rctrl'); break;
+      case KeyCodes.ALT:            keyFunc('button_lalt'); keyFunc('button_ralt'); break;
+      case KeyCodes.SPACE:          keyFunc('button_space'); break;
+    }
+  }
+  function pressButton(buttonID) {
+    var $button = $('#' + buttonID);
+    $button.addClass('pressed');
+  }
+  function releaseButton(buttonID) {
+    var $button = $('#' + buttonID);
+    $button.removeClass('pressed');
+  }
+  </script>
+</body>
+</html>
